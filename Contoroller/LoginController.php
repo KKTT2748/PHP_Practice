@@ -14,7 +14,7 @@ require_once '../Model/LoginModel.php';
 require_once '../Utility/errMsg.php';
 require_once '../Utility/Validattion.php';
 
-session_start();
+// session_start();
 
 // フォーム入力情報を取得
 $strName  = $_POST['username'];
@@ -35,7 +35,7 @@ if(Validation::emp_validate($strPass) === false) {
     $strErrMsg = $arrErrMsg['V003'];
 }
 
-var_dump($strErrMsg);
+// var_dump($strErrMsg);
 
 //ログインロジック
 if(count($strErrMsg) === 0){
