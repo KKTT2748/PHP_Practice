@@ -10,10 +10,6 @@
 
  session_start();
 
- var_dump($_SESSION);
-
- session_destroy();
-
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +33,7 @@
                         <li>
                             <label for="username">Username</label>
                             <input type="text" name="username">
+                            <label for="errMsg"></label>
                             <?php  ?>
                         </li>
                         <li>

@@ -12,6 +12,7 @@
 
 require_once '../Model/LoginModel.php';
 require_once '../Utility/errMsg.php';
+require_once '../Utility/Validattion.php';
 
 session_start();
 
@@ -20,20 +21,36 @@ $strName  = $_POST['username'];
 $strEmail = $_POST['email'];
 $strPass  = $_POST['password'];
 
-// バリデーション
+// 空欄バリデーション_falseなら対応するエラーメッセージを格納
+$arrErrMsg = errMsg::get_err_message();
+if(Validation::emp_validate($strName) === false) {
+    $strErrMsg = $arrErrMsg['V001'];
+}
 
-// 1つでもエラーがあればセッションにエラーメッセージを格納してログイン画面に戻す
+if(Validation::emp_validate($strEmail) === false) {
+    $strErrMsg = $arrErrMsg['V002'];
+}
+
+if(Validation::emp_validate($strPass) === false) {
+    $strErrMsg = $arrErrMsg['V003'];
+}
+
+var_dump($strErrMsg);
 
 //ログインロジック
-$user = LoginModel::login();
-foreach($user as $key => $value){
+if(count($strErrMsg) === 0){
+    $arrUser = LoginModel::login();
+    foreach($arrUser as $key => $value){
     if($value['name'] === $strName && $value['email'] === $strEmail && $value['password'] === $strPass) {
         header('Location: ../View/Menu.php');
         exit;
     } else {
         header('Location: ../View/Login.php');
+        exit;
+    }
     }
 }
+
 
 
 
