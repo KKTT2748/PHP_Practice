@@ -81,3 +81,8 @@ main section + section {
   margin-top: 60px;
 }
 
+/* footer */
+
+footer {
+  text-align: center;
+}
