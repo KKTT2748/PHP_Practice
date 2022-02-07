@@ -25,29 +25,29 @@
     </head>
 
     <body>
-        <div class="container">
-            <h1>Welcome!</h1>
-            <div class="login_form">
-                <form action="../Contoroller/LoginController.php" method="post">
-                    <ul>
-                        <li>
-                            <label for="username">Username</label>
-                            <input type="text" name="username">
-                            <label for="errMsg"></label>
-                            <?php  ?>
-                        </li>
-                        <li>
-                            <label for="email">E:mail</label>
-                            <input type="email" name="email">
-                        </li>
-                        <li>
-                            <label for="password">Password</label>
-                            <input type="password" name="password">
-                        </li>
-                    </ul>
-                    <button type="submit">Login</button>
+        <div class="wrapper">
+            <div class="container">
+                <h1>Welcome</h1>
+                <form class="form">
+                    <input type="text" placeholder="Username" @bind="@UserName">
+                    <input type="password" placeholder="Password" @bind="@Password">
+                    <button type="button" id="login-button" @onclick="this.Log_in">Login</button>
                 </form>
             </div>
+            <ul class="bg-bubbles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
     </body>
 </html>
