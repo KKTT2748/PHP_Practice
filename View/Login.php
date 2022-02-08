@@ -35,7 +35,7 @@
                 </form>
             </div>
             <ul class="bg-bubbles">
-                <li>d</li>
+                <li></li>
                 <li></li>
                 <li></li>
                 <li></li>
