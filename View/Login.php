@@ -28,11 +28,11 @@
         <div class="wrapper">
             <div class="container">
                 <h1>Welcome</h1>
-                <form class="form">
-                    <input type="text" placeholder="Username" @bind="@UserName">
-                    <input type="password" placeholder="Password" @bind="@Password">
-                    <button type="button" id="login-button" @onclick="this.Log_in">Login</button>
-                </form>
+                <form action="../View/Login.php" method="POST"  class="form">
+                    <input type="text" placeholder="Username" name="username">
+                    <input type="email" placeholder="E-Mail" name="email">
+                    <input type="password" placeholder="Paasword" name="password">
+                    <input type="submit" value="Login">
             </div>
             <ul class="bg-bubbles">
                 <li></li>
