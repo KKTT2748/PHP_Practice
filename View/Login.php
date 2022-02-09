@@ -28,7 +28,7 @@
         <div class="wrapper">
             <div class="container">
                 <h1>Welcome</h1>
-                <form action="../Contoroller/LoginController.php" method="POST"  class="form">
+                <form action="../Contoroller/LoginController.php" method="POST" class="form">
                     <input type="text" placeholder="Username" name="username">
                     <input type="email" placeholder="E-Mail" name="email">
                     <input type="password" placeholder="Paasword" name="password">
