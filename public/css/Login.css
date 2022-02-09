@@ -127,7 +127,7 @@ form {
             color: #53e3a6;
         }
 
-    form button {
+    form .Login_btn {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
