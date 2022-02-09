@@ -38,8 +38,8 @@ if(Validation::emp_validate($strPass) === false) {
 // var_dump($strErrMsg);
 
 //ログインロジック
-if(count($strErrMsg) === 0){
-    $arrUser = LoginModel::login();
+//if(count($strErrMsg) === 0){
+    //$arrUser = LoginModel::login();
     foreach($arrUser as $key => $value){
     if($value['name'] === $strName && $value['email'] === $strEmail && $value['password'] === $strPass) {
         header('Location: ../View/Menu.php');
@@ -49,7 +49,7 @@ if(count($strErrMsg) === 0){
         exit;
     }
     }
-}
+//}
 
 
 

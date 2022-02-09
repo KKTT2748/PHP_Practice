@@ -28,11 +28,13 @@
         <div class="wrapper">
             <div class="container">
                 <h1>Welcome</h1>
-                <form action="../View/Login.php" method="POST"  class="form">
+                <form action="../Contoroller/LoginController.php" method="POST"  class="form">
                     <input type="text" placeholder="Username" name="username">
                     <input type="email" placeholder="E-Mail" name="email">
                     <input type="password" placeholder="Paasword" name="password">
-                    <input type="submit" value="Login">
+                        <div class="Login_btn">
+                            <input type="submit" value="Login">
+                        </div>
             </div>
             <ul class="bg-bubbles">
                 <li></li>
