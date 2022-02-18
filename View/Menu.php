@@ -30,19 +30,19 @@
         <div class="container">
           <h1>WORKS</h1>
 
-        <section>
+        <section class="animate">
             <img src="../public/img/work1.png" alt="勇者ゲームの画像">
             <h2>勇者ゲーム</h2>
             <p>すごいゲームです。すごいゲームです。すごいゲームです。すごいゲームです。すごいゲームです。すごいゲームです。すごいゲームです。</p>
         </section>
 
-        <section>
+        <section class="animate">
         <img src="../public/img/work2.png" alt="宝探しゲームの画像">
             <h2>宝探しゲーム</h2>
             <p>すごいゲームです。すごいゲームです。すごいゲームです。すごいゲームです。すごいゲームです。すごいゲームです。すごいゲームです。</p>
         </section>
       
-        <section>
+        <section class="animate">
         <img src="../public/img/work3.png" alt="神経衰弱の画像">
             <h2>神経衰弱</h2>
             <p>すごいゲームです。すごいゲームです。すごいゲームです。すごいゲームです。すごいゲームです。すごいゲームです。すごいゲームです。</p>
@@ -54,4 +54,5 @@
 
     <!-- フッター呼び出し -->
     <?php include('../Component/Footer.php'); ?>
+    <script src="../public/JS/Menu.js"></script>
 </body>
