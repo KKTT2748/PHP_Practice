@@ -52,6 +52,6 @@
     </main>
 
 
-    <!-- フッター読込 -->
+    <!-- フッター呼び出し -->
     <?php include('../Component/Footer.php'); ?>
 </body>

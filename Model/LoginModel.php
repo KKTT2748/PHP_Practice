@@ -19,7 +19,7 @@ class LoginModel
      *
      * @return array $user
      */
-    public static function login()
+    public static function select_users()
     {
         $sql = 'SELECT * FROM users';
 
