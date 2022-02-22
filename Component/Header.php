@@ -7,7 +7,7 @@
     </div>
 
     <div>
-      <h1>川上虎己</h1>
+      <h1><?php echo $_SESSION['id'] ?></h1>
       <p>PHP, Java見習いです。</p>
       <p>日々頑張っています。</p>
 

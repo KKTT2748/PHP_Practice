@@ -30,18 +30,21 @@ session_destroy();
 <body>
     <div class="form-wrapper">
     <h1>User Regist</h1>
-        <form action="../Contoroller/LoginController.php" method="POST" autocomplete="off">
+        <form action="../Controller/UserRegistController.php" method="POST" autocomplete="off">
 
             <div class="form-item">
             <input type="text" placeholder="Username" name="username">
+            <p><?php if(isset($strErrMsg['E001'])) { echo $strErrMsg['E001']; } ?></p>
             </div>
 
             <div class="form-item">
             <input type="password" placeholder="Paasword" name="password">
+            <p><?php if(isset($strErrMsg['E002'])) { echo $strErrMsg['E002']; } ?></p>
             </div>
 
             <div class="form-item">
             <input type="password" placeholder="Confirmation Password" name="conf_password">
+            <p><?php if(isset($strErrMsg['E003'])) { echo $strErrMsg['E003']; } ?></p>
             </div>
 
             <div class="button-panel">

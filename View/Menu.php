@@ -8,6 +8,13 @@
  * @link 
  */
 
+ session_start();
+
+//  完成時にコメント外す
+//  if(!isset($_SESSION['id'])){
+//     header('Location: ../View/Login.php');
+// }
+
 ?>
 
 <!DOCTYPE html>

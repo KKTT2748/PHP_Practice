@@ -16,20 +16,25 @@ class UserRegistModel
 {
     /**
      * DBへユーザー情報を登録
-     * @param $strInputUsername $strInputPassword
-     * @return array $user
+     * @param array $arrUserData
+     * @return bool $result
      */
-    public static function insert_users($strInputUsername, $strInputPassword)
+    public static function insert_users($arrUserData)
     {
-        $sql = 'INSERT INTO users (`name`, `password`) VALUES (`:name`,`:password`)';
+        $result = false;
+
+        $sql = 'INSERT INTO users (name, password) VALUES (?, ?)';
+        $arr = [];
+        $arr[] = $arrUserData['username'];
+        // $arr[] = hash('sha256', $arrUserData['password']);
+        $arr[] = password_hash($arrUserData['password'], PASSWORD_DEFAULT);
 
         try {
             $stmt = connect() -> prepare($sql);
-            $params = array(':name' => $strInputUsername, ':password' => $strInputPassword);
-            $result = $stmt -> execute($params);
+            $result = $stmt -> execute($arr);
             return $result;
         } catch(\Exception $e) {
-            echo '接続エラー'. $e -> getMessage();
+            return $result;
         };
         unset($pdo);
     }

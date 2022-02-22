@@ -9,6 +9,9 @@
  */
 
 session_start();
+if(isset($_SESSION['id'])){
+    header('Location: Login.php');
+}
 
 $strErrMsg = $_SESSION;
 
@@ -30,7 +33,7 @@ session_destroy();
 <body>
     <div class="form-wrapper">
     <h1>Welcome</h1>
-        <form action="../Contoroller/LoginController.php" method="POST" autocomplete="off">
+        <form action="../Controller/LoginController.php" method="POST" autocomplete="off">
 
             <div class="form-item">
             <input type="text" placeholder="Username" name="username">
